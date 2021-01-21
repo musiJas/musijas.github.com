@@ -74,4 +74,12 @@ $(function() {
     }
     $menuList[activeIndex] && $($menuList[activeIndex]).addClass('active');
   }
+  
+   var customUserAgent = 'Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; PRO 7-S Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.4.974 UWS/2.13.2.46 Mobile Safari/537.36 AliApp(DingTalk/4.6.29) com.alibaba.android.rimet/11388461 Channel/10002068 language/zh-CN';
+	//修改后的userAgent
+	Object.defineProperty(navigator, 'userAgent', {
+	  value: customUserAgent,
+	  writable: false
+	});
+	
 });
